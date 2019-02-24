@@ -1,3 +1,4 @@
+/*
 .post-header {
     .post-title {
         margin:     0;
@@ -9,23 +10,38 @@
         }
     }
 }
-
+*/
 // Cover image displayed in single post view
 // When post's `coverImage` variable is defined
 .post-header-cover {
-    display:                     table;
-    position:                    relative;
+    display:       block;
+    max-width:     map-get($main-content, max-width);
+    margin:        0 auto;
+    //padding-right: map-get($main-content, padding-right-left);
+    //padding-left:  map-get($main-content, padding-right-left);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    height: 400px;
+    border-radius: 10px 10px 0px 0px;
+
     // Fix the cover image to the top of the page
-    top:                         0;
-    left:                        0;
-    background-size:             cover;
-    background-position:         center;
-    background-repeat:           no-repeat;
-    width:                       100%;
-    padding:                     calc(#{map-get($header, 'height')} + 30px) 0 30px 0;
+    //top:                         0;
+    //left:                        0;
+    //background-size:             cover;
+    //background-position:         center;
+    //background-repeat:           no-repeat;
+    //width:                       100%;
+    //padding:                     calc(#{map-get($header, 'height')} + 30px) 0 30px 0;
     // 100% minus header high, minus padding-top, minus padding bottom and minus 4px for perfect pixels
-    height:                      100%;
-    z-index:                     map-get($z-indexes, 'c-post-header-cover');
+    //height:                      400px;
+    //z-index:                     map-get($z-indexes, 'c-post-header-cover');
     // Sidebar animation
     // Transition style (push)
     transition:                  transform .25s ease-in-out;
@@ -34,6 +50,7 @@
     -webkit-backface-visibility: hidden;
     -webkit-perspective:         1000;
 
+    /*
     .post-header {
         display:        table-cell;
         vertical-align: middle;
@@ -65,19 +82,21 @@
             }
         }
     }
+    */
 }
 
 // Decrease height of cover image
 .post-header-cover.post-header-cover--partial {
-    height: 60%;
+    //height: 60%;
 }
 
 .post-header-cover-caption {
-    margin: 5px 0 50px 0;
+    //margin: 5px 0 50px 0;
 }
 
 // Decrease the font size of the post's title on very small screen
 @media #{$xsmall-and-down} {
+    /*
     .post-header-cover {
         .post-header {
             .post-title {
@@ -85,10 +104,12 @@
             }
         }
     }
+    */
 }
 
 // Increase the font size of the post's title on small screen
 @media #{$small-only} {
+    /*
     .post-header-cover {
         .post-header {
             .post-title {
@@ -96,9 +117,11 @@
             }
         }
     }
+    */
 }
 
 @media #{$small-and-down} {
+    /*
     .post-header-cover {
         // Display post header cover div in large size
         @include post-header-cover-lg;
@@ -116,9 +139,12 @@
             @include post-header-cover-pushed-md;
         }
     }
+    */
 }
 
 @media #{$medium-only} {
+
+    /*
     // Increase the font size of the post's title on medium screen
     .post-header-cover {
         .post-header {
@@ -145,9 +171,11 @@
             @include post-header-cover-pushed-md;
         }
     }
+    */
 }
 
 @media #{$large-only} {
+    /*
     // Increase the font size of the post's title on large screen
     .post-header-cover {
         .post-header {
@@ -177,9 +205,12 @@
             @include post-header-cover-pushed-md;
         }
     }
+    */
 }
 
 @media #{$xlarge-and-up} {
+
+    /*
     // Increase the font size of the post's title on large screen
     .post-header-cover {
         .post-header {
@@ -216,4 +247,5 @@
             @include post-header-cover-pushed-md;
         }
     }
+    */
 }

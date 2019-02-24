@@ -4,17 +4,41 @@
     display:        inline-block;
     vertical-align: top;
 
-    .post-header {
+    .post-single-wrapper {
+        display:       block;
+        max-width:     map-get($main-content, max-width);
+        margin:        0 auto;
+        //padding-right: map-get($main-content, padding-right-left);
+        //padding-left:  map-get($main-content, padding-right-left);
+        //padding-top: 30px;
+        //padding-bottom: 30px;
+        //padding-left: 30px;
+        //padding-right: 30px;
+
+        @media #{$large-and-up} {
+            background-color: white;
+            border: 1px solid #eef2f8;
+            border-radius: 10px;
+            background-color: white;
+            margin-top: 30px;
+        }
+    }
+
+    //.post-header {
         .post-title {
             margin:     0;
             word-break: initial;
             overflow:   hidden;
+            text-align: left;
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
 
             &:hover {
                 text-decoration: none;
             }
         }
-    }
+    //}
     // Post meta contains post's date, post's categories and tags
     .post-meta {
         line-height: 1.5em;
@@ -22,6 +46,9 @@
         font-size:   map-get($font-size, small);
         font-weight: 400;
         color:       map-get($colors, light);
+
+        padding-left: 30px;
+        padding-right: 30px;
 
         a {
             color: map-get($colors, light);
@@ -32,7 +59,7 @@
         letter-spacing: -0.3px;
         font-family:    map-get($font-families, 'post-content');
         color:          map-get($colors, base);
-        margin-top:     20px;
+        //margin-top:     20px;
         font-weight:    400;
         overflow:       hidden;
         @include prefix('hypens', 'auto', 'webkit' 'moz');
@@ -84,5 +111,7 @@
 @media #{$medium-and-up} {
     .post-content {
         font-size: 1.7rem;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }

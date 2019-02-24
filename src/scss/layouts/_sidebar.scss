@@ -29,8 +29,11 @@
             margin:  0 auto;
         }
         .sidebar-profile-name {
-            font-size: 1.1em;
-            color:     map-get($sidebar, color);
+            font-size: 2.6em;
+            a {
+                color: map-get($sidebar, color);
+                text-decoration: none;
+            }
         }
     }
     // Sidebar's buttons

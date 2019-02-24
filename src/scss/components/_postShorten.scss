@@ -3,8 +3,9 @@
 .postShorten-group {
     .postShorten {
         // Space between 2 shorten post
-        margin-top:    15px;
-        border-bottom: 1px solid #eef2f8;
+        margin-top:    30px;
+        //border: 1px solid #eef2f8;
+        //border-radius: 10px;
     }
 }
 
@@ -16,6 +17,10 @@
     vertical-align: top;
 
     .postShorten-thumbnailimg {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
         overflow:hidden;
     }
     .postShorten-header {
@@ -31,6 +36,7 @@
     }
     // postShorten meta contains post's date, post's categories and tags
     .postShorten-meta {
+        text-align: left;
         line-height: 1.5em;
 
         a {
@@ -69,6 +75,7 @@
         }
     }
     .postShorten-excerpt {
+        text-align: justify;
         margin-top: 15px;
         p:nth-child(1) {
             margin: 0
@@ -94,12 +101,34 @@
 
 // Display the post's thumbnail image on small screen and up
 @media #{$small-and-up} {
+    .postShorten {
+        // Space between 2 shorten post
+        //margin-top:    30px;
+        border: 1px solid #eef2f8;
+        border-radius: 10px;
+        background-color: white;
+    }
+
     .postShorten.postShorten--thumbnailimg-right {
+
+        .postShorten-header {
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .postShorten-excerpt {
+            margin-left: 30px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
         .postShorten-thumbnailimg {
             float:  right;
-            margin: 5px 0 30px 15px;
+            //margin: 0px 0 30px 15px;
 
             img {
+                border-radius: 0px 10px 10px 0px;
                 display:    block;
                 width:      $post-thumbnail-image-width;
                 height:     $post-thumbnail-image-width;
@@ -113,11 +142,25 @@
         }
     }
     .postShorten.postShorten--thumbnailimg-left {
+
+        .postShorten-header {
+            margin-right: 30px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .postShorten-excerpt {
+            margin-right: 30px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
         .postShorten-thumbnailimg {
             float:  left;
-            margin: 5px 15px 30px 0;
+            //margin: 0px 15px 30px 0;
 
             img {
+                border-radius: 10px 0px 0px 10px;
                 display:    block;
                 width:      $post-thumbnail-image-width;
                 height:     $post-thumbnail-image-width;
@@ -132,7 +175,23 @@
     }
     .postShorten.postShorten--thumbnailimg-top {
         .postShorten-thumbnailimg {
-            margin-top: 5px;
+            height: 230px;
+            border-radius: 10px 10px 0px 0px;
+            margin-top: 0px;
+        }
+
+        .postShorten-header {
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .postShorten-excerpt {
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 10px;
+            margin-bottom: 20px;
         }
     }
     .postShorten.postShorten--thumbnailimg-bottom {
